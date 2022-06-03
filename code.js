@@ -1,7 +1,12 @@
-    const inputButton = document.getElementById("inputfilebutton");
-    inputButton.addEventListener("click", clickButton);
+    /* trocas as coisas de ingles p/ portugues aqui e no html */
+    
+    const inputFileButton = document.getElementById("inputfilebutton"); // declaração da ação
+    inputFileButton.addEventListener("click", EscolherArquivo);
 
-    function clickButton(){
+    const EntradaNumeroBotao = document.getElementById("entradanumerobotao"); // declaração da ação
+    EntradaNumeroBotao.addEventListener("click", EscreverNumero);
+
+    function EscolherArquivo(){
         arquivo = document.getElementById("inputfile");
         var fr=new FileReader(); //Leitor de arquivo
 
@@ -14,7 +19,13 @@
         document.getElementById('output').textContent=fr.result; // mostra o arquivo na pagina
                             }
 
-        throw "Não foi, pois gripaloei no dia do vosso convite"
+        var info = document.getElementById('output').textContent;
+
+        console.log(info);
+        
+        if (info == null) {
+        throw "Há um arquivo vazio!";
+        }
         
         }
 
@@ -28,5 +39,18 @@
         alert("DS melhor turma!!! ");
 
             }   
+                              }
+    function EscreverNumero (){
 
-                    }
+    numero = document.getElementById("entradanumero").value
+
+    try {
+        if (numero == '') throw 'Por favor, informe um numero!'
+    }
+
+    catch (erro){
+        console.log (numero)
+        document.getElementById("saidanumero").innerHTML = erro //verificando se está vazio 
+
+    }
+                                }
