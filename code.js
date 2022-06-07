@@ -31,7 +31,7 @@
 
     function EscreverNumero (){
         numero = document.getElementById("entradanumero").value
-
+        document.getElementById("entradanumero").innerHTML = " "
     try {
         if (numero == '') throw 'Por favor, informe um numero!'
         }
@@ -40,7 +40,6 @@
         document.getElementById("saidanumero").innerHTML = erro //verificando se está vazio 
         console.log ("Erro" +erro)
                 }
-
 
     try{
         if ( numero <= 5 || numero >= 10 ) // verifica se o numero está entre 5 e 10
