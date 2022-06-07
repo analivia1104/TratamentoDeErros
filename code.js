@@ -38,7 +38,7 @@
 
     catch (erro){
         document.getElementById("saidanumero").innerHTML = erro //verificando se está vazio 
-
+        console.log ("Erro" +erro)
                 }
 
 
@@ -50,7 +50,7 @@
 
     catch (erro){
         document.getElementById("saidanumero").innerHTML = erro
-
+        console.log ("Erro" +erro)
                 }
 
     finally{
